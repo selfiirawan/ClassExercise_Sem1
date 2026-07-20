@@ -1,0 +1,39 @@
+#name {
+    color: burlywood;
+    background-color:maroon;
+    font-size: 40px;
+    border: 5px solid burlywood;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 20px 30px;
+    text-align: center;
+}
+
+.roadmap {
+    width: 350px;
+}
+
+h2 {
+    color: darkolivegreen;
+    background-color:blanchedalmond;
+    border: 3px solid black;
+    border-radius: 50px;
+    width: 250px;
+    margin: 20px;
+    padding: 10px 0 10px 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.intro {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 20px;
+}
