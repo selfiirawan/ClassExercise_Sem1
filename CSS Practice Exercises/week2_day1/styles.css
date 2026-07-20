@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 25px;
+}
+
+.details {
+    margin: 25px;
+    padding-bottom: 25px;
+}
+
+img {
+    width: 400px;
+    border-radius: 25px 25px 0 0;
+}
+
+.sale-text {
+    border-radius: 50px;
+    display: inline;
+    font-weight: bold;
+    color: forestgreen;
+    background-color: rgb(200, 226, 200);
+    padding: 10px;
+    font-size: 15px;
+}
+
+.for-sale {
+    margin: 40px 0;
+}
+
+.car-type {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.description {
+    line-height: 20px;
+}
+
+.year {
+    margin: 20px 0;
+}
+
+.year > h2 {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    font-size: 18px;
+}
