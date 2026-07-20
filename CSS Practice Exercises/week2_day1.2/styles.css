@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    margin: 30px auto 0 auto;
+}
+
+img {
+    width: 100%;
+    height: 258px;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.sub-title {
+    margin-top: 5px;
+    color: gray;
+}
+
+.description {
+    line-height: 25px;
+    font-size: 19px;
+}
+
+.tags {
+    margin: 40px 0 30px 0;
+}
+
+.tags > p {
+    display: inline;
+    border-radius: 20px;
+    background-color: rgb(239, 235, 235);
+    margin-right: 7px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.price {
+    color: rgb(241, 123, 4);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.button {
+    margin: 0 auto;
+}
+
+.save-btn {
+    width: 35%;
+    border: 3px solid rgb(235, 121, 79);
+    border-radius: 18px;
+    background-color: white;
+    padding: 13px;
+    font-size: 17px;
+    color: rgb(235, 121, 79);
+    margin-right: 10px;
+}
+
+.add-btn {
+    width: 61%;
+    border-radius: 18px;
+    border: 3px solid rgb(235, 121, 79);
+    background-color: rgb(235, 121, 79);
+    padding: 13px;
+    color: white;
+    font-size: 17px;
+    margin-right: 0;
+}
