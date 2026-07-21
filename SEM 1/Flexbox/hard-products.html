@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: gray;
+            text-align: center;
+            margin: 10px 0 20px 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .filter-title {
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 940px;
+        }
+
+        /* Card Styling */
+        .card {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.0);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        .price {
+            margin: 6px 0;
+            font-weight: bold;
+            color: orangered;
+            font-size: 18px;
+        }
+
+        .description {
+            color: gray;
+            margin: 6px 0;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            border: hidden;
+            color: white;
+            background-color: dodgerblue;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <p class="subtitle">Explore our wide range of high-quality products designed to make your life better.</p>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filter Products</h2><hr>
+            <p class="filter-title">Categories</p>
+            <div>
+                <input type="checkbox" id="all-products" name="all-products">
+                <label for="all-products">All Products</label>
+            </div>
+            <div>
+                <input type="checkbox" id="electronics" name="electronics">
+                <label for="electronics">Electronics</label>
+            </div>
+            <div>
+                <input type="checkbox" id="clothing" name="clothing">
+                <label for="clothing">Clothing</label>
+            </div>
+            <div>
+                <input type="checkbox" id="home-kitchen" name="home-kitchen">
+                <label for="home-kitchen">Home & Kitchen</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sports" name="sports">
+                <label for="sports">Sports</label>
+            </div>
+
+            <p class="filter-title">Price Range</p>
+            <div>
+                <input type="checkbox" id="cheapest" name="cheapest">
+                <label for="cheapest">Under $25</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cheap" name="cheap">
+                <label for="cheap">$25 - $50</label>
+            </div>
+            <div>
+                <input type="checkbox" id="medium" name="medium">
+                <label for="medium">$50 - $100</label>
+            </div>
+            <div>
+                <input type="checkbox" id="high" name="high">
+                <label for="high">$100 - $200</label>
+            </div>
+            <div>
+                <input type="checkbox" id="highest" name="highest">
+                <label for="highest">$200 & Above</label>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Wireless Headphones</h3>
+                    <p class="price">$129.99</p>
+                    <p class="description">Premium wireless headphones with noise cancellation and 30-hour battery life.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Smart Watch</h3>
+                    <p class="price">$199.99</p>
+                    <p class="description">Track your fitness, receive notifications, and more with this feature-packed smart watch.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Bluetooth Speaker</h3>
+                    <p class="price">$79.99</p>
+                    <p class="description">Portable Bluetooth speaker with amazing sound quality and 12-hour battery life.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Running Shoes</h3>
+                    <p class="price">$89.99</p>
+                    <p class="description">Lightweight and comfortable running shoes for your daily workout routine.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Coffee Maker</h3>
+                    <p class="price">$59.99</p>
+                    <p class="description">Automatic coffee maker that brews delicious coffee with the press of a button.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/300x200" alt="card-img">
+                <div class="card-content">
+                    <h3 class="title">Backpack</h3>
+                    <p class="price">$49.99</p>
+                    <p class="description">Durable backpack with multiple compartments, perfect for school or travel.</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
