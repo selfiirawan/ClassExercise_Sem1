@@ -17,6 +17,7 @@ img {
     width: 100%;
     height: 300px;
     border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid gray;
 }
 
 .title {
@@ -30,6 +31,7 @@ img {
 
 .description {
     line-height: 20px;
+    text-align: justify;
 }
 
 .tags {
@@ -67,6 +69,7 @@ button {
 
 .price {
     font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: orangered;
     font-weight: bold;
     margin: 20px 0;
