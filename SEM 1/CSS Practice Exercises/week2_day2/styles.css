@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+}
+
+.card {
+    background-color: white;
+    margin: 30px auto;
+    width: 350px;
+    border-radius: 16px;
+}
+
+.card-content {
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px 16px 0 0;
+}
+
+.title {
+    margin: 0;
+}
+
+.sub-title {
+    margin: 2px;
+    color: gray;
+}
+
+.description {
+    line-height: 20px;
+}
+
+.tags {
+    background-color: rgb(232, 229, 229);
+    width: fit-content;
+    border-radius: 16px;
+    padding: 5px;
+    display: inline-block;
+    margin: 25px 7px 0 0;
+}
+
+.save {
+    border: 2px solid orangered;
+    background-color: white;
+    color: orangered;
+    width: 35%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.order {
+    border: hidden;
+    background-color: orangered;
+    color: white;
+    width: 60%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+button {
+    font-size: 17px;
+}
+
+.price {
+    font-size: 30px;
+    color: orangered;
+    font-weight: bold;
+    margin: 20px 0;
+}
