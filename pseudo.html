@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        button:active {
+            background-color: red;
+            color: white;
+        }
+
+        input:focus {
+            border: 12px solid blue;
+        }
+
+        p::before {
+            content: "Before the text: ";
+            font-weight: bold;
+        }
+
+        p::after {
+            content: " : After the text.";
+            font-style: italic;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color: red;
+        }
+
+        p::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+        ul li:first-child {
+            font-weight: bold;
+        }
+
+        ul li:last-child {
+            color: red;
+        }
+
+        h2:first-of-type {
+            color: blue;
+        }
+
+        ul li:nth-child(2n) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <button>Hover over me!</button>
+    <input type="text" placeholder="Type something here">
+
+    <p>This is some text.</p>
+
+    <h2>Heading 1</h2>
+    <h2>Heading 2</h2>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+        <li>Sixth item</li>
+    </ul>
+</body>
+</html>
