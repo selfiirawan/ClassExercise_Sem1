@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo-Classes and Pseudo-Elements</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hover-box {
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .hover-box:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        input:focus {
+            background-color: yellow;
+            border: solid blue;
+        }
+
+        .fancy-paragraph::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: red;
+        }
+
+        .color-list > li::before {
+            content: "→ ";
+        }
+
+        .interactive-btn {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        .interactive-btn::after {
+            content: " (Click me!)";
+        }
+
+        .interactive-btn:active {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    
+     <h1>Pseudo-Classes and Pseudo-Elements</h1>
+
+     <h2>Hover Pseudo-Class</h2>
+     <div class="hover-box">Hover over me!</div>
+
+     <h2>Focus Pseudo-Class</h2>
+     <input type="text" placeholder="Click me and type something">
+
+     <h2>First-Letter Pseudo-Element</h2>
+     <p class="fancy-paragraph">This is a paragraph with fancy styling. Notice how the first letter is bigger and red.</p>
+
+     <h2>Before Pseudo-Element</h2>
+     <ul class="color-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+     </ul>
+
+     <h2>After Pseudo-Element and Active Pseudo-Class</h2>
+     <button class="interactive-btn">Click Me!</button>
+     <p><em>Note: The button turns red when clicked (active state)</em></p>
 </body>
 </html>
