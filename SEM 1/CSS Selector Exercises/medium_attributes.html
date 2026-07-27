@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Attribute Selectors</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        input[type="email"] {
+            border: 2px solid green;
+        }
+
+        a[href*="example"] {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        input[placeholder$="password"] {
+            background-color: yellow;
+        }
+
+        input {
+            display: block;
+            margin: 5px 0;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+     <h1>Attribute Selectors Example</h1>
+
+     <h2>Form Inputs</h2>
+     <input type="text" placeholder="Enter your name">
+     <input type="email" placeholder="Enter your email">
+     <input type="password" placeholder="Create password">
+
+     <h2>Links</h2>
+     <a href="https://example.com">Example.com (has "example" in href, so red)</a>
+     <a href="https://test.com">Test.com (normal styling)</a>
+     <a href="https://example.org/page">Example.org page (has "example" in href, so red)</a>
+</body>
+</html>
