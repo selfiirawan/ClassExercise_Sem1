@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container > p {
+            background-color: yellow;
+        }
+
+        .inner-box {
+            background-color: blue;
+            color: white;
+        }
+
+        p + p {
+            color: red;
+            font-weight: bold;
+        }
+
+        p {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>First paragraph in container</p>
+        <div class="inner-box">
+            <p>Paragraph inside inner-box</p>
+        </div>  
+        <p>Second paragraph in container</p>
+        <p>Third paragraph in container</p>
+    </div>
+    <p>Paragraph outside container</p>
+</body>
+</html>
