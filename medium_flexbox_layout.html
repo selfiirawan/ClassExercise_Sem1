@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            background-color: steelblue;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkred;
+            font-size: 48px;
+        }
+
+        .hero > p {
+            color: green;
+            font-size: 18px;
+        }
+
+        .cards {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 300px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .card > p {
+            color: white;
+            font-size: 16px;
+        }
+
+        .card-red {
+            background-color: #ff6b6b;
+            border: solid #c0392b;
+        }
+
+        .card-yellow {
+            background-color: #f9ca24;
+            border: solid #e1b012;
+        }
+
+        .card-green {
+            background-color: #6ab04c;
+            border: solid #4a7c32;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-red:hover {
+            background-color: #c0392b;
+        }
+
+        .card-yellow:hover {
+            background-color: #e1b012;
+        }
+
+        .card-green:hover {
+            background-color: #4a7c32;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 id="main-title">Welcome to Our Site</h1>
+        <p>This is the hero banner. It opens the full width and introduces the page content.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card card-red">
+            <h2>Card One</h2>
+            <p>This is the first card. It sits in a row alongside the other cards using flexbox.</p>
+        </div>
+        <div class="card card-yellow">
+            <h2>Card Two</h2>
+            <p>This is the second card. Flexbox keeps all cards the same width automatically.</p>
+        </div>
+        <div class="card card-green">
+            <h2>Card Three</h2>
+            <p>This is the third card. The gap property adds a space between each card.</p>
+        </div>
+    </div>
+</body>
+</html>
