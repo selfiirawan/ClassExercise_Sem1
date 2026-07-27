@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Basic Typography Units</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            width: 700px;
+            margin: 30px auto;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: gray;
+        }
+
+        p {
+            font-size: 1rem;
+            color: gray;
+        }
+
+        .highlight {
+            font-size: 2em;
+            color: red;
+            background-color: linen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Main Heading with Pixels</h1><hr>
+        <h2>Subheading with Ems</h2>
+        <p>Body text using rems...</p>
+        <p>Text with <span class="highlight">highlighted content</span> using ems.</p>
+    </div>
+</body>
+</html>
