@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        header {
+            background-color:darkslategrey;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        ul > li {
+            display: inline-block;
+            margin: 0 70px;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color:lightslategray;
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        a:hover {
+            background-color: cadetblue;
+            border-radius: 5px;
+        }
+
+        .content-section {
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        #section1 {
+            background-color: #f0f0f0;
+            text-align: center;
+            align-content: center;
+        }
+
+        #section2 {
+            background-color: lightgray;
+            text-align: center;
+            align-content: center;
+        }
+
+        #section3 {
+            background-color: gray;
+            color: white;
+            text-align: center;
+            align-content: center;
+        }
+
+        hr {
+            border: none;
+            background-color: blue;
+            height: 3px;
+            margin: 20px;
+        }
+
+        footer {
+            background-color:darkslategrey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Title</h1>
+    </header>
+    
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+    
+    <section id="section1" class="content-section">
+        <h2>Section 1</h2><hr>
+        <p>Content for section 1...</p>
+    </section>
+    
+    <section id="section2" class="content-section">
+        <h2>Section 2</h2>
+        <p>Content for section 2...</p>
+    </section>
+    
+    <section id="section3" class="content-section">
+        <h2>Section 3</h2>
+        <p>Content for section 3...</p>
+    </section>
+    
+    <footer>
+        <p>Footer content</p>
+    </footer>
+</body>
+</html>
