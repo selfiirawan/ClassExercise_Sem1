@@ -48,11 +48,15 @@
 
         /* SIDEBAR */
         .sticky-sidebar {
+            position: sticky;
+            left: 20px;
+            top: 30px;
             background-color: white;
             padding: 20px;
             margin: 10px;
             width: 20%;
             height: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         hr {
@@ -79,19 +83,24 @@
         /* MAIN CONTENT */
         .content {
             background-color: white;
-            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 15px;
+            margin-bottom: 50px;
             padding: 20px;
             width: 75%;
         }
 
         .overlapping-section {
             background-color: #f0f0f0;
+            border: 2px dashed lightgray;
             height: 300px;
             padding: 20px;
         }
 
         .box {
             position: absolute;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
             width: 200px;
             height: 200px;
             text-align: center;
@@ -105,17 +114,40 @@
         }
 
         .box2 {
-            top: 25%;
-            left: 370px;
+            top: 33%;
+            left: 33%;
             background-color: blue;
             z-index: 2;
         }
 
         .box3 {
             top: 300px;
-            left: 470px;
+            left: 570px;
             background-color: green;
             z-index: 3;
+        }
+
+        /* BUTTON */
+        .floating-button {
+            background-color:aqua;
+            padding: 10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: darkslategray;
+            padding: 20px;
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
