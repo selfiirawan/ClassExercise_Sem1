@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Level: Complex Photo Gallery</title>
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 150px);
+            grid-gap: 10px;
+        }
+
+        .photo {
+            border: 1px solid black;
+            text-align: center;
+            align-content: center;
+            font-weight: bold;
+        }
+
+        .photo1 {
+            background-color: orangered;
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .photo2 {
+            background-color: deepskyblue;
+        }
+
+        .photo3 {
+            background-color: lightgreen;
+        }
+
+        .photo4 {
+            background-color: yellow;
+        }
+
+        .photo5 {
+            background-color: plum;
+        }
+
+        .photo6 {
+            background-color: darkcyan;
+        }
+
+        .photo7 {
+            background-color: orange;
+            grid-column: 2 / 4;
+        }
+
+        .photo8 {
+            background-color: darkslategray;
+            color: white;
+            grid-column: 1 / 4;
+        }
+
+        .photo9 {
+            background-color: gray;
+            grid-column: 4 / 5;
+            grid-row: 3 / 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-grid">
+        <div class="photo photo1">Photo 1</div>
+        <div class="photo photo2">Photo 2</div>
+        <div class="photo photo3">Photo 3</div>
+        <div class="photo photo4">Photo 4</div>
+        <div class="photo photo5">Photo 5</div>
+        <div class="photo photo6">Photo 6</div>
+        <div class="photo photo7">Photo 7</div>
+        <div class="photo photo8">Photo 8</div>
+        <div class="photo photo9">Photo 9</div>
+    </div>
+</body>
+</html>
