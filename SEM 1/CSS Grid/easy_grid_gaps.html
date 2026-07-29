@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Grid with Gaps</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 80px);
+            grid-gap: 15px;
+        }
+
+        .grid-item {
+            border: 1px solid;
+            text-align: center;
+            align-content: center;
+            font-weight: bold;
+        }
+
+        .odd {
+            background-color: aqua;
+        }
+
+        .even {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+         <div class="grid-item odd">1</div>
+         <div class="grid-item even">2</div>
+         <div class="grid-item odd">3</div>
+         <div class="grid-item even">4</div>
+         <div class="grid-item odd">5</div>
+         <div class="grid-item even">6</div>
+         <div class="grid-item odd">7</div>
+         <div class="grid-item even">8</div>
+    </div>
+
+</body>
+</html>
