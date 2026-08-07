@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            margin: 60px auto;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:hover {
+            animation-name: changeColor;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes changeColor {
+            from {
+                background-color: black;
+            }
+            to {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hover over me</div>
+</body>
+</html>
