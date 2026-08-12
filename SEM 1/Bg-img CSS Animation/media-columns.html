@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Responsive Layout Columns</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            color: cadetblue;
+        }
+
+        .container {
+            margin: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100%);
+            grid-gap: 15px;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 15px;
+        }
+
+        @media (min-width:480px) and (max-width:768px) {
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 500px);
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Responsive Layout Columns</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://static.wixstatic.com/media/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg/v1/fill/w_750,h_520,al_c,q_85/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg" alt="image" height="200px" width="100%">
+                <h3>Article One</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus purus efficitur, lobortis lacus at, consectetur sem.</p>
+                <p>Aliquam laoreet, est eu mollis posuere, arcu nunc ornare ex, luctus rutrum tellus quam ac est. Fusce vitae scelerisque lectus. Morbi pharetra sed tellus ac elementum. </p>
+            </div>
+            <div class="grid-item">
+                <img src="https://static.wixstatic.com/media/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg/v1/fill/w_750,h_520,al_c,q_85/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg" alt="image" height="200px" width="100%">
+                <h3>Article Two</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus purus efficitur, lobortis lacus at, consectetur sem.</p>
+                <p>Aliquam laoreet, est eu mollis posuere, arcu nunc ornare ex, luctus rutrum tellus quam ac est. Fusce vitae scelerisque lectus. Morbi pharetra sed tellus ac elementum. </p>
+            </div>
+            <div class="grid-item">
+                <img src="https://static.wixstatic.com/media/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg/v1/fill/w_750,h_520,al_c,q_85/ee8e9b_691f5f57dff54808add89a3ac59aa1d5~mv2.jpg" alt="image" height="200px" width="100%">
+                <h3>Article Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus purus efficitur, lobortis lacus at, consectetur sem.</p>
+                <p>Aliquam laoreet, est eu mollis posuere, arcu nunc ornare ex, luctus rutrum tellus quam ac est. Fusce vitae scelerisque lectus. Morbi pharetra sed tellus ac elementum. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
