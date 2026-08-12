@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Exercise 1: Contact Form with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Contact Us</h1>
+
+        <form action="">
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Enter your name" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="inputSubject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="inputSubject" placeholder="Enter subject" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="inputMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="inputReference" class="form-label">How did you hear about us?</label>
+                <select id="inputReference" class="form-select">
+                    <option selected>Select an option</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="tiktok">Tiktok</option>
+                </select>
+            </div>
+
+             <button type="submit" class="btn btn-primary mb-5">Submit</button>
+        </form>
+
+        <div class="card p-3">
+            <h5>Contact Information</h5>
+            <p class="m-0"><span class="fw-bold">Address:</span> 123 Main Street, City, Country</p>
+            <p class="m-0"><span class="fw-bold">Phone:</span> +1 (555) 123-4567</p>
+            <p class="m-0"><span class="fw-bold">Email:</span> info@example.com</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
