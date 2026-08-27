@@ -5,41 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            color: white;
+        #my-image {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            animation-name: move-image;
+            animation-duration: 3s;
+            /* reveal the below one by one */
+            animation-delay: 1s;
+            animation-timing-function: ease-out;
+                /*
+                linear - the animation has the same speed from start to finish
+                ease - default value, start slow, then fast, end slow
+                ease-in - animation has a slow start
+                ease-out - animation has a slow end
+                ease-in-out - animation has both slow start and slow end
+                */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /*
+                animation-direction options:
+                - normal
+                - reverse
+                - alternate
+                - alternate-reverse
+            */
+            
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .box {
-            margin: 60px auto;
-            width: 200px;
-            height: 200px;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box:hover {
-            animation-name: changeColor;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-        }
-        @keyframes changeColor {
-            from {
-                background-color: black;
+        @keyframes move-image {
+            0% {
+                left: 0;
             }
-            to {
-                background-color: lightblue;
+
+            50% {
+                left: 50%;
+            }
+
+            100% {
+                left: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="box">Hover over me</div>
+    <img id="my-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NLea_FEibuAgLe6qhf4ulIh-9J_wsTMS0qqToQ8jNA&s=10" />
 </body>
 </html>
