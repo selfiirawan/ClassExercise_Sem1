@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown Event Handler</title>
+</head>
+<body>
+    <input type="text" id="myInput">
+
+    <script>
+        let inputs = document.getElementById("myInput");
+
+        // event type => "keydown"
+        inputs.addEventListener("keydown", function(event) {
+            console.log(this.value);
+
+            // capturing specific keys 
+            if (event.keyCode === 75) {
+                alert("You pressed the 'K' key!");
+            }
+        });
+    </script>
+</body>
+</html>
