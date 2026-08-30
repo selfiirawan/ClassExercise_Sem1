@@ -12,10 +12,11 @@
         let inputs = document.getElementById("myInput");
 
         // event type => "keydown"
+        // note that the function hold a perimeter - function(event)
         inputs.addEventListener("keydown", function(event) {
             console.log(this.value);
 
-            // capturing specific keys 
+            // capturing specific keys with keyCode
             if (event.keyCode === 75) {
                 alert("You pressed the 'K' key!");
             }
