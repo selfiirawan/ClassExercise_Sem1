@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event with onchange</title>
+</head>
+<body>
+    <!-- 1. notice here we use class, not id -->
+    <input type="text" class="myInput">
+    <input type="text" class="myInput">
+    <input type="text" class="myInput">
+
+    <script>
+        // 2. then we use querySelectorAll, not getElementBy
+        // 3. dont forget the class selector "."
+        let inputs = document.querySelectorAll(".myInput");
+
+        for(let i = 0; i < inputs.length; i++) {
+            inputs[i].onchange = function() {
+                alert("Input value change!");
+            };
+        }
+    </script>
+</body>
+</html>

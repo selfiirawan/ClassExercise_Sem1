@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve value of input with event.target.value</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20%;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 20px;
+            width: 50%;
+            font-size: 25px;
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        .country {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="myInput" placeholder="Enter your name">
+    </div>
+    <h3 id="greeting"></h3>
+
+    <div class="country">
+        <select name="" id="country">
+            <option value="">Select Country</option>
+            <option value="US">United States</option>
+            <option value="MY">Malaysia</option>
+            <option value="JP">Japan</option>
+        </select>
+    </div>
+
+    <script>
+        let inputs = document.getElementById("myInput");
+        let greeting = document.getElementById("greeting");
+        let country = document.getElementById("country");
+
+        // input & greeting
+        inputs.addEventListener("change", function() {
+            if (inputs.value === '') {
+                alert ("Enter your name");
+                greeting.style.display = "none";
+            } else {
+                const name = event.target.value;
+                alert(`Name: ${name}`);
+                greeting.style.display = "";
+                greeting.innerText = `Welcome, ${name}!`;
+            }
+        });
+
+        // country selected 
+        country.addEventListener("change", function() {
+            const selected = event.target.value;
+            const name = inputs.value;
+            alert(`${name} is from ${selected}`);
+        })
+    </script>
+</body>
+</html>

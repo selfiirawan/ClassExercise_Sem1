@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event Handler with EventListener</title>
+</head>
+<body>
+    <input type="text" id="myInput">
+    <p id="extra"></p>
+
+    <script>
+        let myInput = document.getElementById("myInput");
+        let text = document.getElementById("extra");
+
+        // keyword for addEventListener = "change"
+        myInput.addEventListener("change", function() {
+            alert("Input value changed!");
+            text.innerHTML = "<h1>HELLO</h1>";
+        });
+    </script>
+</body>
+</html>
