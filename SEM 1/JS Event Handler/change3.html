@@ -70,6 +70,23 @@
             }
         });
 
+
+        // for inline onchange="greeting()"
+        /* function greeting() {
+            let inputs = document.getElementById("myInput");
+            let greeting = document.getElementById("greeting");
+
+            if (inputs.value === '') {
+                alert ("Enter your name");
+                greeting.style.display = "none";
+            } else {
+                const name = event.target.value;
+                alert(`Name: ${name}`);
+                greeting.style.display = "";
+                greeting.innerText = `Welcome, ${name}!`;
+            }
+        } */
+
         // country selected 
         country.addEventListener("change", function() {
             const selected = event.target.value;
