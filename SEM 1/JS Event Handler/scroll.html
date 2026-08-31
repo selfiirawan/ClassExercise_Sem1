@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Event Handler</title>
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            text-align: center;
+            align-content: center;
+            background-color: bisque;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Scroll Event Handler</h1>
+
+    <div id="myDiv">Scroll me</div>
+
+    <script>
+        // method 1
+        /*
+        window.onscroll = function() {
+            console.log("window scrolled!");
+        }
+        */
+
+        // method 2 
+        // with addEventListener 
+        window.addEventListener("scroll", function() {
+            console.log("scrolled!");
+        })
+    </script>
+</body>
+</html>
