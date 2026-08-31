@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+
+        #todoList {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo-app">
+        <input type="text" id="todo-input" placeholder="Add a task">
+        <button id="addBtn">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+
+    <script>
+        let inputs = document.getElementById("todo-input");
+        let btn = document.getElementById("addBtn");
+        let list = document.getElementById("todoList");
+
+        btn.addEventListener("click", function() {
+            if (inputs.value === "") return;
+
+            let li = document.createElement("li");
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            let label = document.createElement("label");
+            label.textContent = inputs.value;
+
+            let remBtn = document.createElement("button");
+            remBtn.textContent = "❌";
+            remBtn.classList.add("remove");
+
+            checkbox.addEventListener("change", function() {
+                label.classList.toggle("completed");
+            });
+
+            remBtn.addEventListener("click", function() {
+                li.remove();
+            })
+
+            li.appendChild(checkbox);
+            li.appendChild(label);
+            li.appendChild(remBtn);
+            list.appendChild(li);
+
+            inputs.value = "";
+        });
+    </script>
+</body>
+</html>
