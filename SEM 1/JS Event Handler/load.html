@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Event Handler</title>
+</head>
+<body>
+    <h1 id="myHeading" style="text-align: center;">Load Event Handler</h1>
+
+    <script>
+        let heading = document.getElementById("myHeading");
+
+        // add load event handler to the WINDOW object
+        window.onload = function() {
+            heading.style.color = "red";
+        }
+
+        // add load event handler to the DOCUMENT object for h1 element
+        /* heading.onload = function() {
+            heading.style.color = "green";
+        }; */
+    </script>
+</body>
+</html>
