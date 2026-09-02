@@ -29,7 +29,22 @@
     $greeting = "Hello";
     ?>
 
+    <!-- short echo syntax -->
     <h2><?= $greeting ?> <?= $name ?></h2>
-    <p>Name: </p>
+    <p>Name: <?= $name ?></p>
+    <p>Age: <?= $age ?></p>
+
+    <?php
+        // array
+        $fruits = ["apple", "kiwi", "mango"];
+        echo $fruits[1];
+    ?>
+
+    <!-- loops -->
+    <ul>
+        <?php foreach($fruits as $fruit): ?>
+            <li><?= $fruit ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
