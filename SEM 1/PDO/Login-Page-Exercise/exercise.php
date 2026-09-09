@@ -110,11 +110,11 @@ if (isset($_POST['login'])) {
         echo "<p style='color:red;'>Login failed.</p>";
     }
 
-}
+
 // STEP 9: Close the if statement from Step 3
 
 // YOUR CODE HERE:
-
+}
 
 
 // =====================================================
