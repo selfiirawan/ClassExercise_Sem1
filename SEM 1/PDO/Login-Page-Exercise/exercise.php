@@ -34,7 +34,6 @@ $user = 'root';
 $pass = '';
 
 $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-
 // echo "<h1>Connected</h1>";
 
 
