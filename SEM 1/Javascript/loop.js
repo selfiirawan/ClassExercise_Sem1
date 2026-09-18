@@ -13,12 +13,12 @@ alert("Correct!");
 console.log("Correct!");
 
 // while method 2 
-let secretNum = 7;
-let input;
+// let secretNum = 7;
+// let input;
 
-while (Number(input) !== secretNum) {
-    input = prompt("Guess the secret number: ");
-}
+// while (Number(input) !== secretNum) {
+//     input = prompt("Guess the secret number: ");
+// }
 
-console.log("Correct!");
-alert(`Correct! The secret number is: ${input}`);
+// console.log("Correct!");
+// alert(`Correct! The secret number is: ${input}`);
