@@ -25,9 +25,9 @@
     </div>
 
     <script>
-        let inputs = document.getElementById("todo-input");
-        let btn = document.getElementById("addBtn");
-        let list = document.getElementById("todoList");
+        const inputs = document.getElementById("todo-input");
+        const btn = document.getElementById("addBtn");
+        const list = document.getElementById("todoList");
 
         btn.addEventListener("click", function() {
             if (inputs.value === "") return;
@@ -42,7 +42,6 @@
 
             let remBtn = document.createElement("button");
             remBtn.textContent = "❌";
-            remBtn.classList.add("remove");
 
             checkbox.addEventListener("change", function() {
                 label.classList.toggle("completed");
@@ -50,11 +49,12 @@
 
             remBtn.addEventListener("click", function() {
                 li.remove();
-            })
+            });
 
             li.appendChild(checkbox);
             li.appendChild(label);
             li.appendChild(remBtn);
+
             list.appendChild(li);
 
             inputs.value = "";
