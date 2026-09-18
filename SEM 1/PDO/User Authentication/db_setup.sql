@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS auth_lesson;
+
+USE auth_lesson;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(75) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
