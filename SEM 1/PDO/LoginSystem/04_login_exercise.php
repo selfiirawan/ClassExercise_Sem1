@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         exit;
     }
     //PDO object to connect to DB
- $db = new PDO("mysql:host=localhost;dbname=login_auth", 'root', '');
+    $db = new PDO("mysql:host=localhost;dbname=login_auth", 'root', '');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //check the user by email

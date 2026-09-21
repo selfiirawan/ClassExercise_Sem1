@@ -19,28 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-$db = new PDO("mysql:host=localhost;dbname=login_auth", 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db = new PDO("mysql:host=localhost;dbname=login_auth", 'root', '');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//check if email exists
+    //check if email exists
 
-$check = $db->prepare("SELECT * FROM users WHERE email = :email");
-$check ->execute([':email'=>$email]);
+    $check = $db->prepare("SELECT * FROM users WHERE email = :email");
+    $check ->execute([':email'=>$email]);
 
-if($check->fetch()){
-    echo"The email is already registered";
-    exit;
-}
+    if($check->fetch()){
+        echo"The email is already registered";
+        exit;
+    }
 
-$hashedPassword =password_hash($password,PASSWORD_DEFAULT);
+    $hashedPassword =password_hash($password,PASSWORD_DEFAULT);
 
-$statement = $db->prepare("INSERT INTO users(email,password) VALUES(:email,:password)");
-$statement->execute([
-    ':email' =>$email,
-    ':password'=>$hashedPassword,
-]);
+    $statement = $db->prepare("INSERT INTO users(email,password) VALUES(:email,:password)");
+    $statement->execute([
+        ':email' =>$email,
+        ':password'=>$hashedPassword,
+    ]);
 
-echo "Successfully registered";
+    echo "Successfully registered";
 }
 ?>
 
