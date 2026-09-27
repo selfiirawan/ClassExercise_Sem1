@@ -1,14 +1,23 @@
 /* Add your CSS styles here */
 body {
     margin: 0;
+    color: #333;
 }
 
 div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+h3 {
+    color: #1f2937;
+}
+
+.subtitle {
+    color: #6b7280;
 }
 
 /* navbar */
@@ -40,30 +49,64 @@ a {
     color: #fff;
 }
 
-.hero {
-    text-align: center;
+.navbar button:hover {
+    background-color: #4338ca;
 }
 
+/* hero */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: #fff;
+}
+
+/* partners */
 .partner {
     text-align: center;
+    background-color: #fff;
 }
 
 .partner img {
-    width: 100px;
-    height: 40px;
-    border: 1px solid black;
+    height: 30px;
+    margin-left: 30px;
 }
 
+/* features */
 .features {
     text-align: center;
+    background-color: #F5F8FF;
 }
 
-.card {
+.features .card {
     text-align: left;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
 }
 
+.card i {
+    /* background-color: #3b82f6; */
+}
+
+.features .card h4 {
+    color: #1f2937;
+}
+
+.card p {
+    color: #6B7280;
+}
+
+/* pricing */
 .pricing {
     text-align: center;
+    background-color: #fff;
+}
+
+.pricing .card {
+    background-color: #f9fafb;
+}
+
+.card ul {
+    list-style: none;
 }
 
 .demo-form {
