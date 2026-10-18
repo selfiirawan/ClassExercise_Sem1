@@ -19,7 +19,7 @@ let colors = ["red", "green"];
 colors.unshift("blue");     // add the first
 console.log(`unshift: ${colors}\n`);
 
-colors.shift();            // remove the first
+console.log(colors.shift());            // remove the first
 console.log(`shift: ${colors}\n`);
 
 colors.shift();
@@ -33,7 +33,7 @@ let letters = ["a", "b", "c", "d", "e"];
 letters.splice(1, 2);    // remove 2 items starting index [1]
 console.log(`splice remove: ${letters}\n`);
 
-letters.splice(1, 0, "x");    // add item x at index [1] , without removing existing item
+letters.splice(0, 0, "x");    // add item x at index [1] , without removing existing item
 console.log(`splice add: ${letters}\n`);
 
 

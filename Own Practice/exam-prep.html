@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 10. change text, style and add class -->
+    <h1 id="title">Hello</h1>
+
+    <!-- 11. create and add element -->
+    <ul id="list"></ul>
+
+    <!-- 12. event handler -->
+    <button id="btn">Click me</button>
+    <p id="count">0</p>
+
+    <script>
+        // 10.
+        let title = document.getElementById("title");
+
+        title.textContent = "Welcome";
+        title.style.color = "blue";
+        title.classList.add("big");
+
+        // 11. 
+        let list = document.getElementById("list");
+        let li = document.createElement("li");
+
+        li.textContent = "Apple";
+        list.appendChild(li);
+
+        // 12.
+        let btn = document.getElementById("btn");
+
+        let count = 0;
+        btn.addEventListener("click", function() {
+            count++;
+            
+            document.getElementById("count").textContent = count;
+        })
+    </script>
+</body>
+</html>
