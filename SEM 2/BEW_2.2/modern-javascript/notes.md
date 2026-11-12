@@ -48,7 +48,7 @@ console.log(car)
 ```
 <br>
 
-## Arrow Function in Callback
+# Arrow Function in Callback
 - `.filter` , `.map` , `.reduce` -> array methods to do specific actions
 - `.filter` -> to find only the elements that fit the specified criteria
 - `.map` -> essentially behave like a for...of loop but simpler. will create new array
