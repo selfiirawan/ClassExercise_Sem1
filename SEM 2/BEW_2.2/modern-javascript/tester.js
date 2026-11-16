@@ -98,8 +98,7 @@ const data = {
     numbers2: [5, 6, 7, 8]
 };
 
-const array1 = data.numbers1
-const array2 = data.numbers2
+const { numbers1: array1, numbers2: array2 } = data
 
 const array3 = [...array1, ...array2]
 
