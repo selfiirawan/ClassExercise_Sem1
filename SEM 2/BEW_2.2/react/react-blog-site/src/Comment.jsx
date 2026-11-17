@@ -1,7 +1,7 @@
-export default function Comment(props) {
+export default function Comment({ text }) {
     return (
         <div>
-            <p>{props.text}</p>
+            <p>{text}</p>
         </div>
     )
 }
