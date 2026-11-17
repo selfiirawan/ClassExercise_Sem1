@@ -1,4 +1,5 @@
 import PhoneNumber from "./PhoneNumber";
+import './Contact.css'
 
 const Contact = () => {
   const contactElement = (
