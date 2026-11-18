@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from "react";
+import heroImg from "./assets/hero.png";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -27,6 +27,34 @@ function App() {
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
+        </button>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 5)}
+        >
+          Increase count by 5
+        </button>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count - 5)}
+        >
+          Deducts count by 5
+        </button>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count * count)}
+        >
+          Multiplies count by itself
+        </button>
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => 0)}
+        >
+          RESET to 0
         </button>
       </section>
 
@@ -116,7 +144,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
