@@ -44,7 +44,9 @@ const ContactForm = () => {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onBlur={() => setNameError("")}
         />
+        {nameError && <div className="text-danger">{nameError}</div>}
       </div>
 
       <div className="mb-3">
@@ -57,7 +59,9 @@ const ContactForm = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onBlur={() => setEmailError("")}
         />
+        {emailError && <div className="text-danger">{emailError}</div>}
       </div>
 
       <div className="mb-3">
@@ -69,7 +73,9 @@ const ContactForm = () => {
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          onBlur={() => setMessageError("")}
         ></textarea>
+        {messageError && <div className="text-danger">{messageError}</div>}
       </div>
 
       <button type="submit" className="btn btn-primary">
