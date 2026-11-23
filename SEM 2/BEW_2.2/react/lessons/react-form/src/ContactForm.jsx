@@ -5,8 +5,35 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setNameError("");
+    setEmailError("");
+    setMessageError("");
+
+    // Make sure all fields are filled in
+    if (!name) setNameError("Name is required");
+    if (!email) setEmailError("Email is required");
+    if (!message) setMessageError("Message is required");
+
+    // Make sure the email is in the right format
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email");
+      return;
+    }
+
+    if (!nameError && !emailError && !messageError)
+      console.log({ name, email, message });
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
