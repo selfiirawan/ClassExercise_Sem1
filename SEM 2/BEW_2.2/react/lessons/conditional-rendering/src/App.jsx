@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Task from "./Task";
+import NoTaskFound from "./NoTaskFound";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -27,8 +28,8 @@ function App() {
   ]);
 
   const [newTask, setNewTask] = useState("");
-
   const [filter, setFilter] = useState("all");
+  const [isFormVisible, setIsFormVisible] = useState(true);
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
@@ -104,21 +105,28 @@ function App() {
         {isFormVisible ? "Hide Form" : "Show Form"}
       </button>
 
-      <form onSubmit={handleSubmit} className="mb-3">
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Add a task..."
-            value={newTask}
-            onChange={handleInputChange}
-          />
-          <button className="btn btn-primary">Add Task</button>
-        </div>
-      </form>
-      {displayedTask.map((task, key) => (
-        <Task key={task.id} {...task} toggleTaskButton={toggleTaskStatus} />
-      ))}
+      {isFormVisible && (
+        <form onSubmit={handleSubmit} className="mb-3">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Add a task..."
+              value={newTask}
+              onChange={handleInputChange}
+            />
+            <button className="btn btn-primary">Add Task</button>
+          </div>
+        </form>
+      )}
+
+      {displayedTask.length > 0 ? (
+        displayedTask.map((task, key) => (
+          <Task key={task.id} {...task} toggleTaskButton={toggleTaskStatus} />
+        ))
+      ) : (
+        <NoTaskFound />
+      )}
     </div>
   );
 }
