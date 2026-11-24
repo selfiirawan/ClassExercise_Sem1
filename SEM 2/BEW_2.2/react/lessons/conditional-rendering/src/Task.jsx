@@ -1,7 +1,12 @@
-export default function Task() {
+const Task = ({ task, isDone }) => {
   return (
-    <div>
-      <h2>Task</h2>
+    <div className="d-flex align-items-center my-2">
+      <input type="checkbox" className="me-3" checked={isDone} readOnly />
+      <span className={isDone ? "text-decoration-line-through" : ""}>
+        {task}
+      </span>
     </div>
   );
-}
+};
+
+export default Task;
