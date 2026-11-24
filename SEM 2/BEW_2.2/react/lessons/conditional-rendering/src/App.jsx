@@ -3,7 +3,7 @@ import Task from "./Task";
 
 function App() {
   // const [count, setCount] = useState(0);
-  const allTheTasks = [
+  const [tasks, setTasks] = useState([
     {
       task: "Sweep the floor",
       isDone: false,
@@ -20,7 +20,23 @@ function App() {
       task: "Fix the roof",
       isDone: false,
     },
-  ];
+  ]);
+
+  const [newTask, setNewTask] = useState("");
+
+  const handleInputChange = (e) => {
+    setNewTask(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newTaskObject = {
+      task: newTask,
+      isDone: false,
+    };
+    setTasks([...tasks, newTaskObject]);
+    setNewTask("");
+  };
 
   return (
     <div>
@@ -31,13 +47,13 @@ function App() {
             type="text"
             className="form-control"
             placeholder="Add a task..."
-            value={task}
+            value={newTask}
             onChange={handleInputChange}
           />
           <button className="btn btn-primary">Add Task</button>
         </div>
       </form>
-      {allTheTasks.map((task, index) => (
+      {tasks.map((task, index) => (
         <Task key={index} {...task} />
       ))}
     </div>
