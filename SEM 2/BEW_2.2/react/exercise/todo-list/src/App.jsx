@@ -6,25 +6,32 @@ import { useState } from "react";
 function App() {
   const [todos, setTodos] = useState([
     {
+      id: 1,
       label: "Task 1",
       isCompleted: true,
     },
     {
+      id: 2,
       label: "Task 2",
       isCompleted: false,
     },
     {
+      id: 3,
       label: "Task 3",
       isCompleted: false,
     },
   ]);
 
-  const addTodo = () => {
-    const sampleNewTodo = {
-      label: "Task 4",
-      isCompleted: false,
-    };
-    setTodos([...todos, sampleNewTodo]);
+  const toggleIsCompleted = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
+      ),
+    );
+  };
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   // step 7
@@ -40,9 +47,13 @@ function App() {
       <div className="card-body">
         <h3 className="card-title mb-3">My Todo List</h3>
 
-        <TodoList todoItems={todos} />
+        <TodoList
+          todoItems={todos}
+          toggleIsCompleted={toggleIsCompleted}
+          deleteTodo={deleteTodo}
+        />
         {/* step 5      step 6 */}
-        <AddTodoForm addNewTodo={addNewTodo} />
+        <AddTodoForm addNewTodo={addNewTodo} todoItems={todos} />
         {/* <button onClick={addTodo}>Add new todo</button> */}
       </div>
     </div>
