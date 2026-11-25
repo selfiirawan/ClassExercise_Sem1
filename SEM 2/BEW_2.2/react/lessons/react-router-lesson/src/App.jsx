@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Comments from "./components/Comments";
 
 /*
   1. BrowserRouter = uses the HTML5 history API to keep your UI 
@@ -21,7 +22,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />}>
+          <Route path="comments" element={<Comments />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
