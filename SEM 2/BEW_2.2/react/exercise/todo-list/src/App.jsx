@@ -5,21 +5,21 @@ import { useState } from "react";
 
 function App() {
   const [todos, setTodos] = useState([
-    {
-      id: 1,
-      label: "Task 1",
-      isCompleted: true,
-    },
-    {
-      id: 2,
-      label: "Task 2",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      label: "Task 3",
-      isCompleted: false,
-    },
+    // {
+    //   id: 1,
+    //   label: "Task 1",
+    //   isCompleted: true,
+    // },
+    // {
+    //   id: 2,
+    //   label: "Task 2",
+    //   isCompleted: false,
+    // },
+    // {
+    //   id: 3,
+    //   label: "Task 3",
+    //   isCompleted: false,
+    // },
   ]);
 
   const toggleIsCompleted = (id) => {
@@ -36,7 +36,10 @@ function App() {
 
   // step 7
   const addNewTodo = (newTodo) => {
-    setTodos([...todos, newTodo]);
+    let newId = todos.length == 0 ? 101 : todos[todos.length - 1].id + 1;
+    const newTodoWithId = { id: newId, ...newTodo };
+
+    setTodos([...todos, newTodoWithId]);
   };
 
   return (

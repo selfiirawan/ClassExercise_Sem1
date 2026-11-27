@@ -8,9 +8,7 @@ export default function AddTodoForm({ addNewTodo, todoItems }) {
   // step 2
   const handleAddButtonClick = (e) => {
     e.preventDefault();
-    const getLastTodo = todoItems[todoItems.length - 1].id;
     const newTodoObject = {
-      id: getLastTodo + 1,
       label: newTodo,
       isCompleted: false,
     };
